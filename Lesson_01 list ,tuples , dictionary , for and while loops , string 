@@ -1,0 +1,630 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "toc_visible": true,
+      "authorship_tag": "ABX9TyN95H0k+2ntVKgSMYsN5W7l",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/FayezAltawafshih/Data-Analyst-with-Python/blob/main/Lesson_01%20list%20%2Ctuples%20%2C%20dictionary%20%2C%20for%20and%20while%20loops%20%2C%20string%20\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Create a python code to Calculate two Numbers"
+      ],
+      "metadata": {
+        "id": "PdL0gMpnL7m5"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "Planets = ['Mercury','Venus','Earth','Mars','Jupiter','Saturn','Uranus','Neptune']\n",
+        "\n",
+        "\n",
+        "print(Planets)"
+      ],
+      "metadata": {
+        "id": "raoN7Y9BMPJC",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "c268cf20-c14b-447a-b61d-2e89f5a4ee34"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(Planets[1])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "27x4Cf8atj3H",
+        "outputId": "5cdbc02d-c056-487d-94b2-ff0e94b81eb4"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Venus\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(Planets[:1])\n",
+        "\n",
+        "print(Planets[0:4])\n",
+        "\n",
+        "print(Planets[4:])\n",
+        "\n",
+        "Planets[2] = 'TEST'\n",
+        "\n",
+        "print(Planets)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "TCkZL1hbxEV9",
+        "outputId": "ae9a80c2-89a3-45a0-8561-c149a2253b74"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['Mercury']\n",
+            "['Mercury', 'Venus', 'TEST', 'Mars']\n",
+            "['Jupiter', 'Saturn', 'Uranus', 'Neptune']\n",
+            "['Mercury', 'Venus', 'TEST', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "len(Planets)\n",
+        "\n",
+        "sorted(Planets)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "di1BE-6N2E9h",
+        "outputId": "1760059a-3190-47fe-89b3-850f31547ff0"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Jupiter', 'Mars', 'Mercury', 'Neptune', 'Saturn', 'TEST', 'Uranus', 'Venus']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 8
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "Planets.append('PLUTO')"
+      ],
+      "metadata": {
+        "id": "cmNMVGyg8bpi"
+      },
+      "execution_count": 9,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(Planets)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "NBcHEQns8vMl",
+        "outputId": "7140a7d6-6d5d-477c-b7aa-7f6b80875a2a"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['Mercury', 'Venus', 'TEST', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune', 'PLUTO']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "Planets.pop(2)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "NHBVfWO58yiX",
+        "outputId": "9a9893dc-3085-400d-a713-82598f428966"
+      },
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'TEST'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 13
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(Planets)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "7hvlrBlE9P8Z",
+        "outputId": "040969b4-69df-4719-c683-8bea1c82309f"
+      },
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['Mercury', 'Venus', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune', 'PLUTO']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "Planets.index('PLUTO')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "eTmKjkJ88713",
+        "outputId": "e8cf6fdb-1d25-448f-ad91-205198941c73"
+      },
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "7"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 15
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "if 'Marhaba' in Planets:\n",
+        "  Planets.index('Marhaba')\n",
+        "else:\n",
+        "  print('No')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "oRg83vN36Aim",
+        "outputId": "33229cb0-8883-4542-f58e-18878f8ef647"
+      },
+      "execution_count": 16,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "No\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "Country = ('Jordan','Syria','Lebnaon','Egypt')"
+      ],
+      "metadata": {
+        "id": "ncAGT7R7LMxb"
+      },
+      "execution_count": 17,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "Country"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Ar6EHCUYL2_a",
+        "outputId": "0c6a416e-e8ca-4435-e87a-ba15d5122061"
+      },
+      "execution_count": 19,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "('Jordan', 'Syria', 'Lebnaon', 'Egypt')"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 19
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "fruits = ['apple','banana','pinapple','watermelon','orange','pear','grapes']\n",
+        "\n",
+        "\n",
+        "for i in fruits:\n",
+        "  print(i)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "BG3ne0xEL7u-",
+        "outputId": "5ffe1d8e-113c-4583-807a-5517ac87b101"
+      },
+      "execution_count": 20,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "apple\n",
+            "banana\n",
+            "pinapple\n",
+            "watermelon\n",
+            "orange\n",
+            "pear\n",
+            "grapes\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for i in range(1,100):\n",
+        "  if i%2 == 0:\n",
+        "    print('Even')\n",
+        "  else:\n",
+        "   print('Odd')\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "8ewR903XOu_-",
+        "outputId": "a47e9554-d2a0-4e91-82e2-b0a4d19c519e"
+      },
+      "execution_count": 22,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n",
+            "Even\n",
+            "Odd\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "j = 0\n",
+        "while j < 10:\n",
+        "  print(j)\n",
+        "  j+=1  # increase the value"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "mS6RBpxQPLiu",
+        "outputId": "fe368953-b2e7-4181-8f54-c3c8b13caf29"
+      },
+      "execution_count": 23,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0\n",
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n",
+            "5\n",
+            "6\n",
+            "7\n",
+            "8\n",
+            "9\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = 'pluto\\s a planet'\n",
+        "y = 'pluto is a planet'\n",
+        "\n",
+        "print(x)\n",
+        "print(y)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5iofLxWnR0s1",
+        "outputId": "ae22cd93-5f44-49aa-87c7-ade5a268434f"
+      },
+      "execution_count": 24,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "pluto\\s a planet\n",
+            "pluto is a planet\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x.upper()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "JAhoU725Sm11",
+        "outputId": "0b014d4f-d5ed-4285-f665-ee49d53d97ce"
+      },
+      "execution_count": 25,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'PLUTO\\\\S A PLANET'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 25
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x.split()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "IM86fHSvS_Zb",
+        "outputId": "52dee0b7-1296-46d4-ab6f-e6d7351b2968"
+      },
+      "execution_count": 26,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['pluto\\\\s', 'a', 'planet']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 26
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "key_country = {'JO':962,'SUD':249,'AUS':612}\n",
+        "\n",
+        "print(key_country['SUD'])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Dfyd4ifyTlEC",
+        "outputId": "4b6e46bf-f4d6-478d-bdb5-f0b9d4eac010"
+      },
+      "execution_count": 30,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "249\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
