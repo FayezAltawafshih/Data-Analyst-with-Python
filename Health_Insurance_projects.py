@@ -1,6 +1,9 @@
 !pip install streamlit
 import streamlit as st
 
+# Your Streamlit app code here
+st.title("Health Insurance Analysis")
+
 config = {
     "include_colab_link": True,
     "title": "Health Insurance Project"
